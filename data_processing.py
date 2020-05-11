@@ -39,8 +39,6 @@ def getData(loc,name_file,size,dic):
 
    
 # Dataset 1
-path_dataset1 = 'E:\Code data\Signature\Signatures\sample_Signature\sample_Signature'
-
 def getNames1(loc):
     real_loc = os.path.join(loc,'genuine')
     forge_loc= os.path.join(loc,'forged')
@@ -61,9 +59,7 @@ def getImages(loc,size,dic):
     return np.asarray(real_img),np.asarray(forge_img)
 
 
-
-path_dataset2 = 'E:\Code data\Signature\Signature2\signatures'
-
+# Dataset 2
 def getImages2(loc,size,dic):
     print("Getting Dataset2 Data..")
     real_names = os.listdir(os.path.join(loc,'full_org'))
@@ -89,6 +85,7 @@ def getDataset3(data,zipobject,dic,size):
     print('100% Complete')
     return lis
 
+# Dataset 3
 def returnPairList(pairfile):
   x1,x2,y=[],[],[]
   for i in pairfile:
